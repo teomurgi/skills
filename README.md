@@ -28,6 +28,20 @@ A topic such as “Docker” is not enough: Skillify asks whether you mean conta
 
 The [design principles and source analysis](skills/skillify/references/design-principles.md) explain the patterns extracted from Matt Pocock's skills and the deliberate adaptations made here.
 
+### Document Domain
+
+[Document Domain](skills/document-domain/SKILL.md) derives a codebase's existing domain and writes a linked Markdown reference using Domain-Driven Design.
+
+Ask your agent:
+
+```text
+Use document-domain to explain the domain of /path/to/repository.
+```
+
+The reference covers domain purpose, vocabulary, subdomains, context relationships, domain models, business rules, workflows, and open questions. Claims cite source evidence and distinguish observed behavior from inferred models and missing information. An explicit output path takes precedence; otherwise it reuses the repository's domain-documentation convention or defaults to `docs/domain`.
+
+Analysis is static: the skill reads source and writes documentation only. It does not execute the project, modify source, redesign the domain, or claim stakeholder validation.
+
 ## Adding a skill
 
 1. Create `skills/<skill-name>/` using a descriptive, lowercase, hyphen-separated name.
