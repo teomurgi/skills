@@ -10,6 +10,24 @@ Matteo Murgida — <teomurgi@gmail.com>
 
 Each skill lives in its own directory under `skills/` and has a `SKILL.md` entry point. Keep supporting scripts, references, and assets alongside that entry point when needed.
 
+## Available skills
+
+### Skillify
+
+[Skillify](skills/skillify/SKILL.md) turns a repeatable action into an agent skill through a clarifying interview.
+
+Ask your agent:
+
+```text
+Use skillify to create a skill for reviewing Python pull requests for correctness.
+```
+
+It establishes the action, asks focused questions about inputs, outputs, success criteria, and permissions, then writes the skill using this repository's conventions. It exercises the result where a runner is available and reports verification limits otherwise. It does not execute the generated skill's underlying action or install, commit, or publish anything.
+
+A topic such as “Docker” is not enough: Skillify asks whether you mean containerizing an app, debugging a container, reviewing a setup, or another action. Answer the interview to select the workflow; it will not choose silently.
+
+The [design principles and source analysis](skills/skillify/references/design-principles.md) explain the patterns extracted from Matt Pocock's skills and the deliberate adaptations made here.
+
 ## Adding a skill
 
 1. Create `skills/<skill-name>/` using a descriptive, lowercase, hyphen-separated name.
