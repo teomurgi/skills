@@ -32,17 +32,16 @@ Start with a short statement of the problem and desired outcome in the author's 
 
 ## <Conceptual heading>
 
-Use one or more sections, ordered to explain a coherent semantic path. Introduce each code excerpt in prose that says what it shows, why it matters, and why it is the next stop. Then show a focused excerpt in this form:
+Use one or more sections, ordered to explain a coherent semantic path. Introduce each code excerpt in prose that says what it shows, why it matters, and why it is the next stop. Show excerpts using standard Markdown: identify the source path and line range in prose, then use a fenced `diff` block:
 
-<excerpt path="repository/relative/file" lines="12-18">
 ```diff
+# path/to/file.ext:12-18
 +the relevant changed lines
  unchanged context only when needed
 -the relevant removed lines, when essential
 ```
-</excerpt>
 
-Explain the responsibility, control flow, data flow, invariant, or implication after the excerpt when the code alone is not clear. Connect it to the previous and next step when that connection is not obvious. Use the smallest range that proves the point; do not reproduce whole files or narrate syntax line by line. Preserve actual diff content and source line locations; never invent a diff. If the available renderer uses another established excerpt syntax, follow it while preserving these requirements.
+Explain the responsibility, control flow, data flow, invariant, or implication after the excerpt when the code alone is not clear. Connect it to the previous and next step when that connection is not obvious. Use the smallest range that proves the point; do not reproduce whole files or narrate syntax line by line. Preserve actual diff content and source line locations; never invent a diff. Do not use custom excerpt tags or renderer-specific wrappers.
 
 Use ordinary Markdown links or code references for important unchanged functions, types, callers, tests, and summarized changed areas. Point to exact paths and line ranges when tools provide them. Mention meaningful changed areas intentionally summarized rather than excerpted.
 
