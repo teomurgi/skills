@@ -42,6 +42,20 @@ The reference covers domain purpose, vocabulary, subdomains, context relationshi
 
 Analysis is static: the skill reads source and writes documentation only. It does not execute the project, modify source, redesign the domain, or claim stakeholder validation.
 
+### Why This
+
+[Why This](skills/why-this/SKILL.md) writes a structured, evidence-backed guide to an existing code change: why it exists and how its final behavior works.
+
+Ask your agent:
+
+```text
+Use why-this to explain the change on this branch.
+```
+
+The guide opens with the problem and desired outcome in the author's terms, then follows a semantic route through the implementation with focused inline diffs and exact source locations, and ends with a recap. It covers everything not landed yet on the default branch unless you name another scope, and separates observed behavior from uncertainty.
+
+The skill sets `disable-model-invocation: true`, so invoke it explicitly. It is read-only: it does not modify code, run tests or builds, or change repository state.
+
 ### Lead Team
 
 [Lead Team](skills/lead-team/SKILL.md) makes the agent the chief of a small team of coding subagents running in adjacent panes of the current [Herdr](https://herdr.dev) desktop tab.
