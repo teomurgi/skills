@@ -42,6 +42,20 @@ The reference covers domain purpose, vocabulary, subdomains, context relationshi
 
 Analysis is static: the skill reads source and writes documentation only. It does not execute the project, modify source, redesign the domain, or claim stakeholder validation.
 
+### Lead Team
+
+[Lead Team](skills/lead-team/SKILL.md) makes the agent the chief of a small team of coding subagents running in adjacent panes of the current [Herdr](https://herdr.dev) desktop tab.
+
+Ask your agent:
+
+```text
+Use lead-team to add a settings page to the dashboard.
+```
+
+The chief designs the change (UI/UX concept and ASCII mockups included), splits it into 1–3 packages with disjoint files, and starts workers with `hc` (default `pi` on `anthropic/claude-sonnet-5-5`, overridable). Workers use the caveman and ponytail skills, implement exactly the spec, and ask the chief whenever in doubt. The chief reviews the diff, runs the repository's verification, reports, and removes the workers once you accept the result.
+
+Requires the Herdr desktop app (`herdr-app`, `hc`); the older `herdr` CLI is not supported. Nobody commits, pushes, or deploys without your permission.
+
 ## Adding a skill
 
 1. Create `skills/<skill-name>/` using a descriptive, lowercase, hyphen-separated name.
