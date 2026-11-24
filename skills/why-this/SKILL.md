@@ -1,5 +1,5 @@
 ---
-name: explain-change
+name: why-this
 description: Create a structured, evidence-backed guide to an existing code change, explaining its motivation and behavior in semantic order with focused inline diffs. Use when asked to explain, walk through, or build a mental model of a change in the current conversation or repository. This is explanatory work; it does not modify code.
 disable-model-invocation: true
 metadata:
